@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  web:
+    image: php:7.4-apache
+    ports:
+      - "8080:80"
+    volumes:
+      - ./path/to/your/app:/var/www/html
+
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: testdb
